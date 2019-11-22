@@ -168,7 +168,6 @@ def generate_and_save_images(model, epoch, test_input):
 
 
 # the main training command
-%%time
 train(train_dataset, EPOCHS)
 
 # save model to served_models
