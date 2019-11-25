@@ -8,7 +8,7 @@ import PIL
 from tensorflow.keras import layers
 
 # load the pre-augmented image array
-im_arr = np.load("../data/processed/vac_im.dat.npy").reshape(23194, 150, 150,1).astype('float32')
+im_arr = np.load("/train/data/vac_im.dat.npy").reshape(23194, 150, 150,1).astype('float32')
 im_arr = im_arr[:,11:139, 11:139,:]
 im_arr = (im_arr - 127.5) / 127.5 # Normalize the images to [-1, 1]
 
@@ -128,13 +128,13 @@ def train_step(images):
 
 def train(dataset, epochs):
   for epoch in range(epochs):
-    start = time.time()
+    #start = time.time()
 
     for image_batch in dataset:
       train_step(image_batch)
 
     # Produce images for the GIF as we go
-    display.clear_output(wait=True)
+    #display.clear_output(wait=True)
     generate_and_save_images(generator,
                              epoch + 1,
                              seed)
@@ -143,10 +143,10 @@ def train(dataset, epochs):
     if (epoch + 1) % 15 == 0:
       checkpoint.save(file_prefix = checkpoint_prefix)
 
-    print ('Time for epoch {} is {} sec'.format(epoch + 1, time.time()-start))
+    #print ('Time for epoch {} is {} sec'.format(epoch + 1, time.time()-start))
 
   # Generate after the final epoch
-  display.clear_output(wait=True)
+  #display.clear_output(wait=True)
   generate_and_save_images(generator,
                            epochs,
                            seed)
@@ -164,7 +164,7 @@ def generate_and_save_images(model, epoch, test_input):
       plt.axis('off')
 
   plt.savefig('image_at_epoch_{:04d}.png'.format(epoch))
-  plt.show()
+  #plt.show()
 
 
 # the main training command
