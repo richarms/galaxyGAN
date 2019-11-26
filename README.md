@@ -12,7 +12,7 @@ In the Train mode, the deep convolutional generative adversarial network (GAN) m
 
 to run training, do:
 
-docker run -it --rm -v $(pwd)/models:/train/models -v $(pwd)/data:/train/data ds-dl/train
+`docker run -it --rm -v $(pwd)/models:/train/models -v $(pwd)/data:/train/data ds-dl/train`
 
 In the Serve step, the generative model is 'served' in two ways: as a streamlit app for individual user interaction with the served model and also using the RESTful API of tensorflow serving for programmatic, performant and defined interaction with the model. Optionally, before serving, the model is selectively pruned for faster inference.
 
