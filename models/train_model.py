@@ -173,5 +173,5 @@ def generate_and_save_images(model, epoch, test_input):
 train(train_dataset, EPOCHS)
 
 # save model to served_models
-export_path = '../served_models/'
+export_path = '/train/models/'
 generator.save(export_path + 'GGAN_generator.pd')
