@@ -45,8 +45,10 @@ t3 = BashOperator(
 )
 
 t4 = BashOperator(task_id="train", bash_command="date", dag=dag)
-t5 = BashOperator(task_id="serve", bash_command="date", dag=dag)
+t5 = BashOperator(task_id="tensorflow_serve", bash_command="date", dag=dag)
+t6 = BashOperator(task_id="streamlit_serve", bash_command="date", dag=dag)
 
 #t2.set_upstream(t1)
 t4.set_upstream(t1)
 t5.set_upstream(t4)
+t6.set_upstream(t4)
