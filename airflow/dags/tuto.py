@@ -22,10 +22,10 @@ default_args = {
     # 'end_date': datetime(2016, 1, 1),
 }
 
-dag = DAG("tutorial", default_args=default_args, schedule_interval=timedelta(1))
+dag = DAG("ETL_Train_Serve", default_args=default_args, schedule_interval=timedelta(1))
 
 # t1, t2 and t3 are examples of tasks created by instantiating operators
-t1 = BashOperator(task_id="print_date", bash_command="date", dag=dag)
+t1 = BashOperator(task_id="etl", bash_command="date", dag=dag)
 
 t2 = BashOperator(task_id="sleep", bash_command="sleep 5", retries=3, dag=dag)
 
@@ -44,5 +44,9 @@ t3 = BashOperator(
     dag=dag,
 )
 
+t4 = BashOperator(task_id="train", bash_command="date", dag=dag)
+t5 = BashOperator(task_id="serve", bash_command="date", dag=dag)
+
 t2.set_upstream(t1)
-t3.set_upstream(t1)
+t4.set_upstream(t1)
+t5.set_upstream(t4)
