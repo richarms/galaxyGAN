@@ -4,6 +4,8 @@ import tensorflow as tf
 import numpy as np
 import os
 
+import matplotlib.pyplot as plt
+
 import PIL
 from tensorflow.keras import layers
 
@@ -135,9 +137,9 @@ def train(dataset, epochs):
 
     # Produce images for the GIF as we go
     #display.clear_output(wait=True)
-    generate_and_save_images(generator,
-                             epoch + 1,
-                             seed)
+    #generate_and_save_images(generator,
+    #                         epoch + 1,
+    #                         seed)
 
     # Save the model every 15 epochs
     if (epoch + 1) % 15 == 0:
@@ -147,9 +149,9 @@ def train(dataset, epochs):
 
   # Generate after the final epoch
   #display.clear_output(wait=True)
-  generate_and_save_images(generator,
-                           epochs,
-                           seed)
+  #generate_and_save_images(generator,
+  #                         epochs,
+  #                         seed)
 
 def generate_and_save_images(model, epoch, test_input):
   # Notice `training` is set to False.
