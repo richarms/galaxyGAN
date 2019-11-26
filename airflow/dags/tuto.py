@@ -27,7 +27,7 @@ dag = DAG("ETL_Train_Serve", default_args=default_args, schedule_interval=timede
 # t1, t2 and t3 are examples of tasks created by instantiating operators
 t1 = BashOperator(task_id="etl", bash_command="date", dag=dag)
 
-t2 = BashOperator(task_id="sleep", bash_command="sleep 5", retries=3, dag=dag)
+#t2 = BashOperator(task_id="sleep", bash_command="sleep 5", retries=3, dag=dag)
 
 templated_command = """
     {% for i in range(5) %}
