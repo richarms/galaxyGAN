@@ -2,7 +2,7 @@
 
 A template for deep learning data science projects
 
-![title]("https://github.com/richarms/galaxyGAN/blob/master/images/title.png")
+![title](https://github.com/richarms/galaxyGAN/blob/master/images/title.png)
 
 This repository is both a project on its own, as well as a template for deep learning projects. Major modes of a deep learning data science project have been incorporated, from ETL (extract, transform, load) to Train to Serve, as well as the important sandbox activity through all of these, mostly conducted in jupyter notebooks, which is called here Explore. Each of these steps is performed by a separate docker container.
 
