@@ -47,6 +47,6 @@ t3 = BashOperator(
 t4 = BashOperator(task_id="train", bash_command="date", dag=dag)
 t5 = BashOperator(task_id="serve", bash_command="date", dag=dag)
 
-t2.set_upstream(t1)
+#t2.set_upstream(t1)
 t4.set_upstream(t1)
 t5.set_upstream(t4)
