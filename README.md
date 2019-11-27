@@ -4,9 +4,9 @@
 
 ![title](https://github.com/richarms/galaxyGAN/blob/master/images/title.png)
 
-A template for deep learning data science projects
-
 ## ETL - Train - Serve
+
+A template for deep learning data science projects
 
 ![title](https://github.com/richarms/galaxyGAN/blob/master/images/ETL_Train_Serve.png)
 
