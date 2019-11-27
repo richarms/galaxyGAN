@@ -1,8 +1,10 @@
 # galaxyGAN
 
-### Unique synthetic radio galaxies
+## Unique synthetic radio galaxies
 
 ![title](https://github.com/richarms/galaxyGAN/blob/master/images/title.png)
+
+Simulations of the radio sky for next-generation instruments and algorithms require models that are both cosmologically accurate and unique. This project tackles the latter. It is a data-augmentation; we take as input images of known extended radio sources, capture the features of this latent space, and generate images of 'new' radio galaxies.
 
 ## ETL - Train - Serve
 
