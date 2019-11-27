@@ -4,7 +4,7 @@
 
 Simulations of the radio sky for next-generation instruments and algorithms require models that are both cosmologically accurate and unique. This project tackles the latter. It is a data-augmentation; we take as input images of known extended radio sources, capture the features of this latent space, and generate images of 'new' radio galaxies.
 
-![title](https://github.com/richarms/galaxyGAN/blob/master/images/title.png)
+
 
 ## ETL - Train - Serve
 
@@ -35,3 +35,4 @@ In the Serve step, the generative model that was trained in the previous mode is
 In order to automate and monitor the full ETL - Train - Serve process, the airflow task manager is used, operating on Docker images directly. to set up airflow for the project, go into the airflow directory and edit the DAG template to point to the docker containers build above. Then, run `docker-compose up` in the airflow directory to launch airflow
 
 ![title](https://github.com/richarms/galaxyGAN/blob/master/images/airflow.png)
+
