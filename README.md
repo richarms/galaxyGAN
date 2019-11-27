@@ -2,9 +2,11 @@
 
 A template for deep learning data science projects
 
-![title](https://github.com/richarms/galaxyGAN/blob/master/images/title.png)
+![title](https://github.com/richarms/galaxyGAN/blob/master/images/ETL_Train_Serve.png)
 
 This repository is both a project on its own, as well as a template for deep learning projects. Major modes of a deep learning data science project have been incorporated, from ETL (extract, transform, load) to Train to Serve, as well as the important sandbox activity through all of these, mostly conducted in jupyter notebooks, which is called here Explore. Each of these steps is performed by a separate docker container.
+
+![title](https://github.com/richarms/galaxyGAN/blob/master/images/title.png)
 
 In the ETL step, a heterogenous sample of extended radio sources from three different radio surveys, stored as .fits image files. .fits images are centred on the nominal position of the source, and then converted to uniformly-sized arrays of normalised pixels. Domain-relevant image augmentation is performed (i.e. rotations, translations through the abscissa and ordinate, images are not arbitrarily cropped or scaled). The resulting numpy array is then converted to a tensorflow dataset, shuffled and randomised.
 
