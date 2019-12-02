@@ -2,7 +2,7 @@
 
 ### Unique synthetic radio galaxies
 
-Simulations of the radio sky for next-generation instruments and algorithms require models that are both cosmologically accurate and unique. This project tackles the latter. It is a data-augmentation; we take as input images of known extended radio sources, capture the features of this latent space, and generate images of 'new' radio galaxies.
+Simulations of the radio sky for next-generation instruments and algorithms require models that are both cosmologically accurate and unique. This project tackles the latter. It is a data-augmentation; we take as input images of known extended radio sources, train a deep convolutional generative adverserial network (GAN), and generate unique images of radio galaxies.
 
 
 
