@@ -1,0 +1,6 @@
+augmentation:
+    step_degrees: 10
+    inp_dir: ./data
+    flip: True
+other:
+    use_anonymous: yes
